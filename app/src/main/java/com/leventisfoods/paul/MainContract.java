@@ -11,10 +11,8 @@ package com.leventisfoods.paul;
 public interface MainContract  {
 
     interface MvpView{
-
     }
 
     interface MvpPresenter{
-
     }
 }
