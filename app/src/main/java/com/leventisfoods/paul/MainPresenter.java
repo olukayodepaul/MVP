@@ -6,9 +6,7 @@ public class MainPresenter  implements MainContract.MvpPresenter{
 
 
     MainPresenter(MainContract.MvpView views){
-
         this.views = views;
-
     }
 
 }
