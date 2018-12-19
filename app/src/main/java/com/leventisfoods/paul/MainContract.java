@@ -3,7 +3,7 @@ package com.leventisfoods.paul;
 
 /**
  * Define the contract between the View {@link MainActivity} and the Presenter
- * {@link MainPresenter}
+ * {@link MainPresenterIml}
  */
 
 
@@ -11,8 +11,16 @@ package com.leventisfoods.paul;
 public interface MainContract  {
 
     interface MvpView{
+
+        void showValidationError(String call, String message);
+        void signSuccess();
+        void signInError();
+
     }
 
     interface MvpPresenter{
+
+        void signIn(String user, String password);
     }
+
 }
