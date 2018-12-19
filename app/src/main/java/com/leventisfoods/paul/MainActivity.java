@@ -8,6 +8,8 @@ import com.leventisfoods.paul.mvp.R;
 public class MainActivity extends AppCompatActivity implements MainContract.MvpView {
 
     private MainPresenter mainPresenter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
