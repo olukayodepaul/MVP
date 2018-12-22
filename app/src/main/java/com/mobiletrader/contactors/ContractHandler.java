@@ -1,12 +1,12 @@
 package com.mobiletrader.contactors;
 
 
-import com.mobiletrader.paul.MainActivity;
-import com.mobiletrader.paul.MainPresenterIml;
+import com.mobiletrader.ui.MainActivity;
+import com.mobiletrader.implementation.LoginPresenterIml;
 
 /**
  * Define the contract between the View {@link MainActivity} and the Presenter
- * {@link MainPresenterIml}
+ * {@link LoginPresenterIml}
  */
 
 

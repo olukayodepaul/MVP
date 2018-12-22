@@ -1,21 +1,20 @@
-package com.mobiletrader.paul;
+package com.mobiletrader.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-
 import com.mobiletrader.contactors.ContractHandler;
-import com.mobiletrader.paul.mvp.R;
+import com.mobiletrader.implementation.LoginPresenterIml;
+import com.mobiletrader.ui.mvp.R;
 import com.mobiletrader.util.AppUtil;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements ContractHandler.LoginView {
 
 
-    private MainPresenterIml mainPresenter;
+    private LoginPresenterIml mainPresenter;
     private Button mBtns;
 
     @BindView(R.id.users)
@@ -34,14 +33,13 @@ public class MainActivity extends AppCompatActivity implements ContractHandler.L
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mainPresenter = new MainPresenterIml(MainActivity.this);
+        mainPresenter = new LoginPresenterIml(MainActivity.this);
         ButterKnife.bind(this);
 
         btns.setOnClickListener(v -> {
             String user = users.getText().toString();
             String pas = pass.getText().toString();
             mainPresenter.signIn(user,pas);
-
         });
     }
 

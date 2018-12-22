@@ -1,14 +1,14 @@
-package com.mobiletrader.paul;
+package com.mobiletrader.implementation;
 
 import android.text.TextUtils;
 
 import com.mobiletrader.contactors.ContractHandler;
 
-public class MainPresenterIml implements ContractHandler.LoginPresenter{
+public class LoginPresenterIml implements ContractHandler.LoginPresenter{
 
     private ContractHandler.LoginView views;
 
-    MainPresenterIml(ContractHandler.LoginView views){
+    public LoginPresenterIml(ContractHandler.LoginView views){
         this.views = views;
     }
 

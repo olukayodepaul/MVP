@@ -1,4 +1,4 @@
-package com.mobiletrader.paul.mvp;
+package com.mobiletrader.ui.mvp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
