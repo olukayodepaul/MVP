@@ -7,20 +7,16 @@ package com.leventisfoods.paul;
  */
 
 
+public interface MainContract {
 
-public interface MainContract  {
-
-    interface MvpView{
-
-        void showValidationError(String call, String message);
+    //Response to view
+    interface LoginView {
+        void showValidationError(String message);
         void signSuccess();
-        void signInError();
-
     }
 
-    interface MvpPresenter{
-
+    //Request from view
+    interface LoginPresenter {
         void signIn(String user, String password);
     }
-
 }
