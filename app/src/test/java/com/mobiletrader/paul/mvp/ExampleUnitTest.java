@@ -1,4 +1,4 @@
-package com.leventisfoods.paul.mvp;
+package com.mobiletrader.paul.mvp;
 
 import org.junit.Test;
 

@@ -1,17 +1,18 @@
-package com.leventisfoods.paul;
+package com.mobiletrader.paul;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.leventisfoods.paul.mvp.R;
-import com.leventisfoods.util.AppToast;
+import com.mobiletrader.contactors.ContractHandler;
+import com.mobiletrader.paul.mvp.R;
+import com.mobiletrader.util.AppUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements MainContract.LoginView {
+public class MainActivity extends AppCompatActivity implements ContractHandler.LoginView {
 
 
     private MainPresenterIml mainPresenter;
@@ -46,12 +47,12 @@ public class MainActivity extends AppCompatActivity implements MainContract.Logi
 
     @Override
     public void showValidationError(String msg){
-        AppToast.showToast(getApplicationContext(),msg);
+        AppUtil.showToast(getApplicationContext(),msg);
     }
 
     @Override
     public void signSuccess() {
-        AppToast.showAlertDialog(MainActivity.this, "Error","please enter users and password","Ok");
+        AppUtil.showAlertDialog(MainActivity.this, "Error","please enter users and password","Ok");
     }
 
 

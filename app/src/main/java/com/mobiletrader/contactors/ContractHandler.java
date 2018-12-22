@@ -1,5 +1,8 @@
-package com.leventisfoods.paul;
+package com.mobiletrader.contactors;
 
+
+import com.mobiletrader.paul.MainActivity;
+import com.mobiletrader.paul.MainPresenterIml;
 
 /**
  * Define the contract between the View {@link MainActivity} and the Presenter
@@ -7,7 +10,7 @@ package com.leventisfoods.paul;
  */
 
 
-public interface MainContract {
+public interface ContractHandler {
 
     //Response to view
     interface LoginView {
@@ -19,4 +22,5 @@ public interface MainContract {
     interface LoginPresenter {
         void signIn(String user, String password);
     }
+
 }

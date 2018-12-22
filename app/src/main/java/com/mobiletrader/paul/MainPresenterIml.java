@@ -1,13 +1,14 @@
-package com.leventisfoods.paul;
+package com.mobiletrader.paul;
 
 import android.text.TextUtils;
 
-public class MainPresenterIml implements MainContract.LoginPresenter{
+import com.mobiletrader.contactors.ContractHandler;
 
-    private MainContract.LoginView views;
+public class MainPresenterIml implements ContractHandler.LoginPresenter{
 
+    private ContractHandler.LoginView views;
 
-    MainPresenterIml(MainContract.LoginView views){
+    MainPresenterIml(ContractHandler.LoginView views){
         this.views = views;
     }
 
