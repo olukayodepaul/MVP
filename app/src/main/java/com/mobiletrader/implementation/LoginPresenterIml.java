@@ -8,14 +8,16 @@ public class LoginPresenterIml implements ContractHandler.LoginPresenter{
 
     private ContractHandler.LoginView views;
 
-    public LoginPresenterIml(ContractHandler.LoginView views){
+
+    public LoginPresenterIml(ContractHandler.LoginView views) {
         this.views = views;
     }
 
     @Override
     public void signIn(String user, String password){
+
         if(TextUtils.isEmpty(user) || TextUtils.isEmpty(password)){
-            views.showValidationError("Please enter password and usernamer");
+            views.showError("Please enter password and usernamer");
         }else{
             views.signSuccess();
         }

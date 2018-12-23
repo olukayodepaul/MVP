@@ -1,5 +1,6 @@
 package com.mobiletrader.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements ContractHandler.L
     @BindView(R.id.btns)
     Button btns;
 
+    Intent intent;
+
 
 
     @Override
@@ -44,14 +47,17 @@ public class MainActivity extends AppCompatActivity implements ContractHandler.L
     }
 
     @Override
-    public void showValidationError(String msg){
-        AppUtil.showToast(getApplicationContext(),msg);
+    public void showError(String msg){
+        //AppUtil.showToast(getApplicationContext(),msg);
+        AppUtil.showAlertDialog(MainActivity.this, "Error","please enter users and password","Ok");
     }
 
     @Override
     public void signSuccess() {
-        AppUtil.showAlertDialog(MainActivity.this, "Error","please enter users and password","Ok");
+        //Return realm model
+        intent = new Intent(MainActivity.this, homeActivity.class);
+        startActivity(intent);
+        finish();
     }
-
 
 }

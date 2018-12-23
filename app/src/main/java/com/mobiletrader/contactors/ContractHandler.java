@@ -14,7 +14,7 @@ public interface ContractHandler {
 
     //Response to view
     interface LoginView {
-        void showValidationError(String message);
+        void showError(String message);
         void signSuccess();
     }
 
