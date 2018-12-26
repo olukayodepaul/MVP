@@ -4,10 +4,9 @@ import android.text.TextUtils;
 
 import com.mobiletrader.contactors.ContractHandler;
 
-public class LoginPresenterIml implements ContractHandler.LoginPresenter{
+public class LoginPresenterIml implements ContractHandler.LoginPresenter {
 
     private ContractHandler.LoginView views;
-
 
     public LoginPresenterIml(ContractHandler.LoginView views) {
         this.views = views;
@@ -21,6 +20,7 @@ public class LoginPresenterIml implements ContractHandler.LoginPresenter{
         }else{
             views.signSuccess();
         }
+
     }
 
 }
